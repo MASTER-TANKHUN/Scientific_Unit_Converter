@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link rel="icon" href="https://e7.pngegg.com/pngimages/691/688/png-clipart-microscope-microscope-angle-photography.png">
+   <title>Scientific Unit Converter</title>
+</head>
+<body id="Develop_By_MASTER-TANKHUN">
+    <div class="converter-box">
+        <h1>Scientific Unit Converter</h1>
+        
+        <div class="input-group">
+            <label for="inputValue">Enter value to convert:</label>
+            <input type="number" id="inputValue" placeholder="e.g., 42">
+        </div>
+        
+        <div class="input-group">
+            <label for="fromUnit">From unit:</label>
+            <select id="fromUnit">
+                <option value="1e24">Yotta (Y) - 10²⁴</option>
+                <option value="1e21">Zetta (Z) - 10²¹</option>
+                <option value="1e18">Exa (E) - 10¹⁸</option>
+                <option value="1e15">Peta (P) - 10¹⁵</option>
+                <option value="1e12">Tera (T) - 10¹²</option>
+                <option value="1e9">Giga (G) - 10⁹</option>
+                <option value="1e6">Mega (M) - 10⁶</option>
+                <option value="1e3">Kilo (k) - 10³</option>
+                <option value="1e2">Hecto (h) - 10²</option>
+                <option value="1e1">Deca (da) - 10¹</option>
+                <option value="1" selected>Base unit - 10⁰</option>
+                <option value="1e-1">Deci (d) - 10⁻¹</option>
+                <option value="1e-2">Centi (c) - 10⁻²</option>
+                <option value="1e-3">Milli (m) - 10⁻³</option>
+                <option value="1e-6">Micro (μ) - 10⁻⁶</option>
+                <option value="1e-9">Nano (n) - 10⁻⁹</option>
+                <option value="1e-12">Pico (p) - 10⁻¹²</option>
+                <option value="1e-15">Femto (f) - 10⁻¹⁵</option>
+                <option value="1e-18">Atto (a) - 10⁻¹⁸</option>
+                <option value="1e-21">Zepto (z) - 10⁻²¹</option>
+                <option value="1e-24">Yocto (y) - 10⁻²⁴</option>
+            </select>
+        </div>
+        
+        <div class="input-group">
+            <label for="toUnit">To unit:</label>
+            <select id="toUnit">
+                <option value="1e24">Yotta (Y) - 10²⁴</option>
+                <option value="1e21">Zetta (Z) - 10²¹</option>
+                <option value="1e18">Exa (E) - 10¹⁸</option>
+                <option value="1e15">Peta (P) - 10¹⁵</option>
+                <option value="1e12">Tera (T) - 10¹²</option>
+                <option value="1e9">Giga (G) - 10⁹</option>
+                <option value="1e6">Mega (M) - 10⁶</option>
+                <option value="1e3">Kilo (k) - 10³</option>
+                <option value="1e2">Hecto (h) - 10²</option>
+                <option value="1e1">Deca (da) - 10¹</option>
+                <option value="1">Base unit - 10⁰</option>
+                <option value="1e-1">Deci (d) - 10⁻¹</option>
+                <option value="1e-2">Centi (c) - 10⁻²</option>
+                <option value="1e-3">Milli (m) - 10⁻³</option>
+                <option value="1e-6">Micro (μ) - 10⁻⁶</option>
+                <option value="1e-9">Nano (n) - 10⁻⁹</option>
+                <option value="1e-12">Pico (p) - 10⁻¹²</option>
+                <option value="1e-15">Femto (f) - 10⁻¹⁵</option>
+                <option value="1e-18">Atto (a) - 10⁻¹⁸</option>
+                <option value="1e-21">Zepto (z) - 10⁻²¹</option>
+                <option value="1e-24">Yocto (y) - 10⁻²⁴</option>
+            </select>
+        </div>
+        
+        <button onclick="convertUnit()">Convert</button>
+        
+        <div class="result-box" id="result">
+            <h3>Result:</h3>
+            <p>Please enter a value and select units to convert</p>
+        </div>
+        
+        <h3 style="margin-top: 32px;">Scientific Units Table</h3>
+        <table class="units-table">
+            <tr>
+                <th>Unit Name</th>
+                <th>Symbol</th>
+                <th>Value</th>
+                <th>Usage</th>
+            </tr>
+            <tr>
+                <td>Yotta</td>
+                <td>Y</td>
+                <td>10²⁴</td>
+                <td>Computer data (yottabytes, YB), massive energy scales</td>
+            </tr>
+            <tr>
+                <td>Zetta</td>
+                <td>Z</td>
+                <td>10²¹</td>
+                <td>Total internet data volume</td>
+            </tr>
+            <tr>
+                <td>Exa</td>
+                <td>E</td>
+                <td>10¹⁸</td>
+                <td>Global annual energy consumption</td>
+            </tr>
+            <tr>
+                <td>Peta</td>
+                <td>P</td>
+                <td>10¹⁵</td>
+                <td>Large-scale computer storage</td>
+            </tr>
+            <tr>
+                <td>Tera</td>
+                <td>T</td>
+                <td>10¹²</td>
+                <td>Hard drive capacity, terabytes (TB)</td>
+            </tr>
+            <tr>
+                <td>Giga</td>
+                <td>G</td>
+                <td>10⁹</td>
+                <td>Computer processing speed, gigahertz (GHz)</td>
+            </tr>
+            <tr>
+                <td>Mega</td>
+                <td>M</td>
+                <td>10⁶</td>
+                <td>File memory, megabytes (MB)</td>
+            </tr>
+            <tr>
+                <td>Kilo</td>
+                <td>k</td>
+                <td>10³</td>
+                <td>Weight (kilogram), distance (kilometer)</td>
+            </tr>
+            <tr>
+                <td>Hecto</td>
+                <td>h</td>
+                <td>10²</td>
+                <td>Volume (hectoliter)</td>
+            </tr>
+            <tr>
+                <td>Deca</td>
+                <td>da</td>
+                <td>10¹</td>
+                <td>Area (decameter²)</td>
+            </tr>
+            <tr>
+                <td>Base unit</td>
+                <td>-</td>
+                <td>10⁰</td>
+                <td>Base units (meter, gram, second)</td>
+            </tr>
+            <tr>
+                <td>Deci</td>
+                <td>d</td>
+                <td>10⁻¹</td>
+                <td>Length (decimeter)</td>
+            </tr>
+            <tr>
+                <td>Centi</td>
+                <td>c</td>
+                <td>10⁻²</td>
+                <td>Length (centimeter)</td>
+            </tr>
+            <tr>
+                <td>Milli</td>
+                <td>m</td>
+                <td>10⁻³</td>
+                <td>Volume (milliliter), length (millimeter)</td>
+            </tr>
+            <tr>
+                <td>Micro</td>
+                <td>μ</td>
+                <td>10⁻⁶</td>
+                <td>Diameter of a human hair</td>
+            </tr>
+            <tr>
+                <td>Nano</td>
+                <td>n</td>
+                <td>10⁻⁹</td>
+                <td>Nanotechnology, virus size</td>
+            </tr>
+            <tr>
+                <td>Pico</td>
+                <td>p</td>
+                <td>10⁻¹²</td>
+                <td>Time in electronic circuits</td>
+            </tr>
+            <tr>
+                <td>Femto</td>
+                <td>f</td>
+                <td>10⁻¹⁵</td>
+                <td>Atomic nucleus size</td>
+            </tr>
+            <tr>
+                <td>Atto</td>
+                <td>a</td>
+                <td>10⁻¹⁸</td>
+                <td>Quantum physics measurements</td>
+            </tr>
+            <tr>
+                <td>Zepto</td>
+                <td>z</td>
+                <td>10⁻²¹</td>
+                <td>Particle physics measurements</td>
+            </tr>
+            <tr>
+                <td>Yocto</td>
+                <td>y</td>
+                <td>10⁻²⁴</td>
+                <td>Mass of fundamental particles</td>
+            </tr>
+        </table>
+
+        <footer>
+            <p>Develop By <a href="https://github.com/MASTER-TANKHUN" target="_blank">MASTER-T</span></p>
+        </footer>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
