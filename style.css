@@ -166,4 +166,7 @@ footer p a{
     .units-table th, .units-table td {
         padding: 8px;
     }
+    .result-box p{
+        font-size: 12px;
+    }
 }
