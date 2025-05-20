@@ -27,7 +27,7 @@ function convertUnit() {
     document.getElementById('result').innerHTML = `
         <h3>Result:</h3>
         <p>${formatScientific(inputValue)} ${fromUnitName.split(' - ')[0]} = ${formatScientific(resultValue)} ${toUnitName.split(' - ')[0]}</p>
-        <p>Base value: ${formatScientific(baseValue)}</p>
+        <p>Base value: ${inputValue}</p>
         <p>From unit multiplier: ${formatScientific(fromUnit)}</p>
         <p>To unit multiplier: ${formatScientific(toUnit)}</p>
     `;
